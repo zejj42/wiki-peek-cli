@@ -4,3 +4,4 @@ __pycache__
 *spec
 wiki-peek-cli.spec
 wiki.spec
+.DS_Store
