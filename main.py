@@ -8,17 +8,13 @@ def args_to_string(input):
     return " ".join(input[1:])
 
 
-def fetch_and_print_summary(topic):
-    summary = fetch_wiki_summary(topic)
-    print(summary if summary else FETCH_ERROR)
-
-
 def find_articles(topic):
     search_results = fetch_wiki_articles(topic)
     if search_results:
         selected_topic = prompt_user_for_selection(search_results[1:])
         if selected_topic:
-            fetch_and_print_summary(selected_topic)
+            summary = fetch_wiki_summary(selected_topic)
+            print(summary if summary else FETCH_ERROR)
     else:
         print(NO_RESULTS_FOUND_ERROR)
 
