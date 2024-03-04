@@ -7,17 +7,17 @@ This script provides a command-line interface to fetch and display summaries fro
 ## Installation
 
 1. Clone this repository to your local machine using:
-   \```sh
+   ```sh
    git clone https://github.com/zejj42/wiki-peek-cli.git
-   \```
+   ```
 2. Navigate to the cloned directory:
-   \``` sh
+   ```sh
    cd wiki-peek-cli
-   \```
+   ```
 3. Install the required dependencies:
-   \``` sh
+   ```sh
    pip install -r requirements.txt
-   \```
+   ```
 
 ## Building the Executable
 
@@ -26,28 +26,28 @@ To use the script as a command-line utility, follow these steps to build it into
 ### On Unix-based systems (Linux/macOS):
 
 1. Build the executable using PyInstaller:
-   \```sh
+   ```sh
    pyinstaller --name wiki main.py
-   \```
+   ```
 2. Move the built application directory to /usr/local/share/:
-   \```sh
+   ```sh
    sudo mv dist/wiki /usr/local/share/
-   \```
+   ```
 3. Create a symbolic link in /usr/local/bin to the wiki executable:
-   \```sh
+   ```sh
    sudo ln -s /usr/local/share/wiki/wiki /usr/local/bin
-   \```
+   ```
 4. Verify that the wiki command is available in your PATH by typing:
-   \```sh
+   ```sh
    wiki --version
-   \```
+   ```
 
 ### On Windows:
 
 1. Build the executable using PyInstaller:
-   \```cmd
+   ```cmd
    pyinstaller --name wiki main.py
-   \```
+   ```
 2. The build process will create a directory named wiki under dist. Inside, you will find wiki.exe along with other dependencies.
 3. Add the path to the wiki.exe to your system's PATH environment variable. This enables you to run the wiki command from anywhere in the Command Prompt or PowerShell.
    - Right-click on 'This PC' or 'My Computer' and select 'Properties'.
@@ -55,9 +55,9 @@ To use the script as a command-line utility, follow these steps to build it into
    - In the 'System variables' section, find the PATH variable and select 'Edit'.
    - Add the path to your wiki.exe file. Be sure to separate it from other entries with a semicolon (;).
 4. Verify that the wiki command is available in your PATH by opening a new Command Prompt or PowerShell window and typing:
-   \```cmd
+   ```cmd
    wiki --version
-   \```
+   ```
 
 ## Usage
 
